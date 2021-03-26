@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #canvas {
+      position: absolute;
+    }
+
+    .operate {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 100px;
+    }
+
+    input {
+      display: inline;
+      width: 50px;
+    }
+  </style>
+  <!-- 引入jquery库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <script>
+    // 配置内容
+    var pageEditor = {
+      annoId: "202016154532703",
+      alpha: "1", // 设置透明度
+      location: {
+        tannoName: "slider5",
+        x: "0.14727540500736377", // 坐标位置x轴
+        y: "0.173972602739726", // 坐标位置y周
+        width: "0.3418262150220913",
+        height: "0.447945205479452",
+        rotation: "5", // 旋转角度
+        reflection: "false",
+        reflectionType: "0",
+        reflectionAlpha: "0",
+        pageWidth: "1358",
+        pageHeight: "730",
+      },
+      shadow: {
+        // 配置阴影
+        hasDropShadow: "true",
+        shadowDistance: "4",
+        shadowAngle: "90",
+        shadowColor: "0",
+        shadowAlpha: "1",
+        shadowBlurX: "200",
+        shadowBlurY: "200",
+      },
+      cpName: "fbp",
+      className: "com.mobiano.flipbook.image.TAnnoAlphaTransitionBanner",
+      autoBool: "true", // 配置自动播放
+      selectBtn: "false",
+      duration: "3", // 设置轮播时间
+    };
+  </script>
+  <!-- 根据配置文件初始化canvas的位置宽高和阴影旋转等相关样式 -->
+  <script src="./js/canvasInit.js"></script>
+  <!-- 实现轮播效果 -->
+  <script src="./js/slider.js"></script>
+</body>
+
+</html>
